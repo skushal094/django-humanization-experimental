@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Django Humanization Using num2words</title>
+</head>
+<body>
+<h1>Convert Number to Words</h1>
+<h6>(Humanize)</h6>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="number" name="number">
+    <input type="submit" value="Convert">
+</form>
+
+{% if words %}
+<br>
+<div>Result: {{ words }}</div>
+<br>
+<div>In currency: {{ currency }}</div>
+{% endif %}
+
+</body>
+</html>
